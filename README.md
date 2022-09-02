@@ -46,3 +46,10 @@ java -jar ALARM-1.0.jar
 -f, --factor            Select a specific parameter to run the plotter against it (options: a positive number in [0,7])
 
 ```
+
+## Reproduce the plots
+In order to regenerate all the plots in the paper you can simply run
+```
+java -jar ALARM-1.0.jar -p 
+```
+And the resulting plots will be in a directy named `plots`.
