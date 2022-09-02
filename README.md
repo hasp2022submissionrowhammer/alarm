@@ -1,17 +1,30 @@
 # ALARM: Active LeArning Rowhammer Mitigations
 
-## How to run
-It is a Maven project and in order to run ALARM, you'd need to 
-- Build the `jar` file by running 
+## How to build and run
+The code is using `make` and Maven (https://maven.apache.org/). In order to run ALARM, you'll need to 
+build the `jar` file by running 
 ```
 make
 ``` 
+Then
+
 - Find the generated `jar` file in `target`
 - Run the code by 
+  ```
+  java -jar <path to the jar>/ALARM-1.0.jar
+  ```
+
+## Reproducing the  plots in the paper
+
+In order to generate all the plots in the paper simply run
 ```
-java -jar ALARM-1.0.jar
+java -jar <path to the jar>/ALARM-1.0.jar --plotter 
 ```
-- Options:
+The resulting plots will be in a directory named `plots`.
+
+## All  options
+We list all available options for our code:
+
 ```
 -h, --help              Help
 
@@ -47,9 +60,3 @@ java -jar ALARM-1.0.jar
 
 ```
 
-## Reproduce the plots
-In order to regenerate all the plots in the paper you can simply run
-```
-java -jar ALARM-1.0.jar -p 
-```
-And the resulting plots will be in a directy named `plots`.
